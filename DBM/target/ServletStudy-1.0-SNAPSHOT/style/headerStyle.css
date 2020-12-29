@@ -1,0 +1,51 @@
+*{/*清空所有样式*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:#f6f6f6;
+}
+#header{
+    height: 36px;
+    background: white;
+}
+#header .header_top{
+    height: 36px;
+    background: #f5f5f5;
+}
+
+#header .header_top_center{
+    width: 1200px;/*设置版心宽度*/
+    height: 36px;/*设置高度*/
+    margin: 0 auto;/*居中显示*/
+}
+#header .h_top_left{
+    color: #6C6C6C; /*设置左侧文字颜色*/
+    font-size: 13px;/*设置宋体大小*/
+    height: 36px;/*设置高度*/
+    line-height: 36px;/*设置行高，文字垂直居中显示*/
+    float: left;/*左右显示*/
+}
+
+#header .h_top_left a{
+    text-decoration: none;/*把链接下划线去掉*/
+    color: #6C6C6C;
+    margin: 0 10px;/*上下为0 左右为10距离*/
+    font-size: 13px;
+}
+#header .h_top_right{
+    height: 36px;
+    line-height: 36px;
+    float: right;/*左右显示*/
+}
+#header .h_top_right a{
+    text-decoration: none;/*把链接下划线去掉*/
+    color: #6C6C6C;
+    margin: 0 10px;/*上下为0 左右为10距离*/
+    font-size: 13px;
+}
+#header .h_top_right a:hover{
+    color: #ff4400;
+    font-size: 14px;
+}

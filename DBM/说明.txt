@@ -1,0 +1,62 @@
+登录
+    请求参数：
+        username
+        password
+        limit
+    请求地址：
+        <form action="/DBM/login" name="fir" id="login" method="POST">
+
+    登录成功：
+        提示登录成功
+        如果limit == user，跳转到 main.html
+        如果limit == root，跳转到 mainRoot.html
+    登录失败：
+        提示登录失败，跳转回到登录页面 login.html
+
+
+
+管理员显示所有图书（包括总数及在馆数）
+    请求参数：
+    请求地址：
+        <form action="/DBM/rootshowbooks" method="POST">
+        http://localhost:8080/DBM/rootshowbooks
+
+    返回所有书籍的json
+
+
+
+管理员新增书籍：
+    请求参数：
+        String book_id;
+        String book_name;
+        Double price;
+        String auther;
+        String book_kind;
+        String publisher;
+        Integer book_num;
+        String description;
+        Integer now_num;
+    请求地址：
+        http://localhost:8080/DBM/addBook
+
+
+
+借阅书籍：
+    请求参数：
+        book_id
+        (user_id在登录后存储在cookie中，不需要在请求参数中传)
+    请求地址:
+        http://localhost:8080/DBM/borrowBook
+
+归还书籍：
+    请求参数：
+        book_id
+    请求地址：
+        http://localhost:8080/DBM/returnBook
+
+
+
+用户显示所有借阅书籍：
+    请求参数：
+    请求地址：
+        http://localhost:8080/DBM/userbooks

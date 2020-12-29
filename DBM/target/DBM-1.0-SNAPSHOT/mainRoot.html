@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员主页</title>
+
+    <link rel="stylesheet" href="style/table.css">
+</head>
+
+<script>
+    function Check() {
+        var a = document.delete.deletebutton.value;
+        if (a == "") {
+            window.alert("图书id不能为空");
+            return false;
+        }
+        var form = document.getElementById("id_delete");
+        form.submit();
+        return true;
+    }
+</script>
+
+<body>
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>图书管理系统</title>
+        <!--链接外部样式-->
+        <link rel="stylesheet" href="style/headerStyle.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: #666666;
+            }
+
+            body {
+                background-color: #f9f9f9;
+            }
+
+            th {
+                height: 40px;
+                white-space: nowrap;
+                background-color: #f8f8f9;
+            }
+
+            .box table {
+                margin: 50px auto;
+                width: 70%;
+            }
+
+            table td {
+                text-align: center;
+                border-color: lavenderblush !important;
+            }
+            th {
+                background-color: #f8f8f9 !important;
+                border: 1px solid #e9eaec !important;
+            }
+            table tr:hover td {
+                background-color: #ebf7ff;
+            }
+
+            .delete {
+                width: 200px;
+                height: 200px;
+                margin: 20px auto;
+            }
+
+            form span {
+                margin-left: -112px;
+                margin-right: 19px;
+            }
+
+            button {
+                background-color: red;
+                border: none;
+                color: white;
+                padding: 13px 7px;
+                margin-left: 8px;
+                margin-top: 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 13px;
+                border-radius: 15px;
+            }
+
+            .add {
+                background-color: green;
+            }
+
+            button:hover {
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .in {
+                display: inline-block;
+                width: 80%;
+                height: 32px;
+                line-height: 1.5;
+                padding: 4px 7px;
+                font-size: 12px;
+                border: 1px solid #dddee1;
+                border-radius: 4px;
+                color: #495060;
+                background-color: #fff;
+                background-image: none;
+                position: relative;
+                cursor: text;
+                transition: border .2s ease-in-out, background .2s ease-in-out, box-shadow .2s ease-in-out;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+        <!--头部-->
+        <div id="header">
+            <!--头部登录，购物车-->
+            <div class="header_top">
+                <!--中部-->
+                <div class="header_top_center">
+                    <!--中部左侧-->
+                    <div class="h_top_left">
+                        欢迎来到图书管理系统
+                        <a href="/DBM/rootshowbooks">主页</a>
+                    </div>
+                    <!--中部右侧-->
+                    <div class="h_top_right">
+                        <!--有没有用户  session -->
+                        <div class="h_top_left">
+                            欢迎： root
+                            <a href="/DBM/logout">退出</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <table class="gridtable">
+                <tr>
+                    <th>图书编号</th>
+                    <th>书名</th>
+                    <th>图书描述</th>
+                    <th>图书类别</th>
+                    <th>作者</th>
+                    <th>出版社</th>
+                    <th>价格</th>
+                    <th>总数</th>
+                    <th>在库数</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1.0</td>
+                    <td>1</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>111</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1.0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>高等数学</td>
+                    <td>xxxyyds</td>
+                    <td>教材</td>
+                    <td>我</td>
+                    <td>高等出版社</td>
+                    <td>100000.0</td>
+                    <td>20000</td>
+                    <td>9999</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3.0</td>
+                    <td>3</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>m</td>
+                    <td>11111</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1.0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>q</td>
+                    <td>111</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1.0</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+
+            </table>
+
+            <div class="delete">
+                <form action="/DBM/deleteBook" name="delete" id="id_delete" method="POST">
+
+                    <span class="">删除图书的id</span>
+                    <input class="in" type="text" name="book_id" placeholder="请输入..." />
+                    <div>
+                        <button name="deletebutton" onclick="Check()">删除图书</button>
+                        <a href="newBook.jsp">
+                            <button class="add">添加图书</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </body>
+
+    </html>

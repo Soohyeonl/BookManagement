@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员主页</title>
+
+    <link rel="stylesheet" href="style/table.css">
+</head>
+
+<script>
+    function Check() {
+        var a = document.delete.deletebutton.value;
+        if(a == "") {
+            window.alert("图书id不能为空");
+            return false;
+        }
+        var form = document.getElementById("id_delete");
+        form.submit();
+        return true;
+    }
+</script>
+
+<body>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理系统</title>
+    <!--链接外部样式-->
+    <link rel="stylesheet" href="style/headerStyle.css">
+
+</head>
+<body>
+<!--头部-->
+<div id="header">
+<!--头部登录，购物车-->
+<div class="header_top">
+        <!--中部-->
+        <div class="header_top_center">
+            <!--中部左侧-->
+            <div class="h_top_left">
+                欢迎来到图书管理系统
+                
+                    <a href="/DBM/rootshowbooks">主页</a>
+                
+            </div>
+            <!--中部右侧-->
+            <div class="h_top_right">
+            <!--有没有用户  session -->
+            
+
+            <div class="h_top_left">
+                
+                    欢迎： root
+                    <a href="/DBM/logout">退出</a>
+                
+            </div>
+            </div>
+
+
+        </div>
+</div>
+
+
+</div>
+    
+<center>
+    
+
+
+    <table class="gridtable">
+        <th>
+        <td>图书编号</td>
+        <td>书名</td>
+        <td>图书描述</td>
+        <td>图书类别</td>
+        <td>作者</td>
+        <td>出版社</td>
+        <td>价格</td>
+        <td>总数</td>
+        <td>在库数</td>
+
+        </th>
+
+
+        
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1.0</td>
+                <td>1</td>
+                <td>5</td>
+            </tr>
+            <br />
+        
+            <tr>
+                <td></td>
+                <td>11</td>
+                <td>111</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1.0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <br />
+        
+            <tr>
+                <td></td>
+                <td>2</td>
+                <td>高等数学</td>
+                <td>xxxyyds</td>
+                <td>教材</td>
+                <td>我</td>
+                <td>高等出版社</td>
+                <td>100000.0</td>
+                <td>20000</td>
+                <td>9999</td>
+            </tr>
+            <br />
+        
+            <tr>
+                <td></td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3.0</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <br />
+        
+            <tr>
+                <td></td>
+                <td>m</td>
+                <td>11111</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1.0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <br />
+        
+            <tr>
+                <td></td>
+                <td>q</td>
+                <td>111</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1.0</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <br />
+        
+    </table>
+
+    <form action="/DBM/deleteBook" name="delete"  id="id_delete" method="POST">
+        <table>
+            <tr>
+                <th>删除图书的id</th>
+                <td><input type="text" name="book_id" placeholder="请输入..." /></td>
+                <td>
+                    <input type="button" name="deletebutton" value="删除图书" onclick="Check()" />
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="newBook.jsp">
+                        <input type="button" value="添加图书" />
+                    </a>
+
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</center>
+
+</body>
+</html>

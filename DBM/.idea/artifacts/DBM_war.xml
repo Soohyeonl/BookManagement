@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DBM:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>DBM</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="DBM-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="DBM:war exploded" />
+    </root>
+  </artifact>
+</component>

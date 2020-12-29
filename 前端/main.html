@@ -1,0 +1,281 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户主页</title>
+    <link rel="stylesheet" href="style/table.css">
+
+    <script type="text/javascript">
+
+        function Check() {
+            var a = document.borrow.book_id.value
+            if (a == "") {
+                window.alert("图书id不能为空");
+                return false;
+            }
+
+            var form = document.getElementById("borrow");
+            form.submit();
+
+        }
+
+        function Check1() {
+            var b = document.returnb.book_id.value
+            if (b == "") {
+                window.alert("图书id不能为空");
+                return false;
+            }
+
+            var form = document.getElementById("returnb");
+            form.submit();
+
+        }
+
+        function Check2() {
+            var c = document.search.search_thing.value
+            if (c == "") {
+                window.alert("图书id不能为空");
+                return false;
+            }
+
+            var form = document.getElementById("search_id");
+            form.submit();
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理系统</title>
+    <!--链接外部样式-->
+    <link rel="stylesheet" href="style/headerStyle.css">
+
+</head>
+<body>
+<!--头部-->
+<div id="header">
+<!--头部登录，购物车-->
+<div class="header_top">
+        <!--中部-->
+        <div class="header_top_center">
+            <!--中部左侧-->
+            <div class="h_top_left">
+                欢迎来到图书管理系统
+                
+                    <a href="/DBM/userbooks">主页</a>
+                
+
+            </div>
+            <!--中部右侧-->
+            <div class="h_top_right">
+            <!--有没有用户  session -->
+            
+
+            <div class="h_top_left">
+                
+                    欢迎： 1
+                    <a href="/DBM/logout">退出</a>
+                
+            </div>
+            </div>
+
+
+        </div>
+</div>
+
+
+</div>
+    
+
+
+<form action="/DBM/borrowBook" name="borrow" id="borrow" method="POST">
+    <table>
+        <tr>
+            <th>借书id</th>
+            <td><input type="text" name="book_id" placeholder="请输入..."/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" value="借书" onclick="Check()"/>
+
+            </td>
+        </tr>
+    </table>
+</form>
+
+<form action="/DBM/returnBook" name="returnb" id="returnb" method="POST">
+    <table>
+        <tr>
+            <th>还书id</th>
+            <td><input type="text" name="book_id" placeholder="请输入..."/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" value="还书" onclick="Check1()"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+
+
+
+
+
+
+
+<table class="gridtable">
+    <th>
+    <td>图书编号</td>
+    <td>书名</td>
+    <td>借阅时间</td>
+    <td>到期时间</td>
+    </th>
+    
+
+
+    
+        <tr>
+            <td></td>
+            <td>2</td>
+            <td>高等数学</td>
+            <td>2020-12-26</td>
+            <td>2021-01-26</td>
+        </tr>
+        <br/>
+    
+        <tr>
+            <td></td>
+            <td>3</td>
+            <td>3</td>
+            <td>2020-12-26</td>
+            <td>2021-01-26</td>
+        </tr>
+        <br/>
+    
+
+    
+</table>
+
+
+
+<form action="/DBM/searchbook" name="search" id="search_id" method="POST">
+    <table>
+        <tr>
+            <th>查询内容</th>
+            <td><input type="text" name="search_thing" placeholder="请输入..."/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" value="查询" onclick="Check2()"/>
+
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+
+    
+
+
+
+<table class="gridtable">
+    <th>
+    <td>图书编号</td>
+    <td>书名</td>
+    <td>图书描述</td>
+    <td>图书类别</td>
+    <td>作者</td>
+    <td>出版社</td>
+    <td>价格</td>
+    <td>总数</td>
+    <td>在库数</td>
+    </th>
+    
+
+
+    
+        <tr>
+            <td></td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+            <td>1</td>
+            <td>5</td>
+        </tr>
+        <br/>
+    
+        <tr>
+            <td></td>
+            <td>11</td>
+            <td>111</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <br/>
+    
+        <tr>
+            <td></td>
+            <td>m</td>
+            <td>11111</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <br/>
+    
+        <tr>
+            <td></td>
+            <td>q</td>
+            <td>111</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <br/>
+    
+
+    
+</table>
+
+
+
+
+
+
+</body>
+</html>
